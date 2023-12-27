@@ -276,9 +276,9 @@
         CMP DAY_INPUT, AL    
         JG ABOVE
         JB BELOW
-        ;ADD DOOMSDAY, 0            ;IN CASE THAT DAY_INPUT EQUAL 14
+        ;ADD DOOMSDAY, 0            ;IN CASE THAT DAY_INPUT EQUAL SPECIAL_DAY
         CALL DOOMSDAY_PRINT
-        JMP FINISHED               ;OUT IF IT EQUAL 14
+        JMP FINISHED               ;OUT IF IT EQUAL SPECIAL_DAY
         ABOVE:
             SUB DAY_INPUT, AL
             MOV AH, 00             ;SURE THAT AH IS CLEAR
